@@ -1,0 +1,15 @@
+1)Pour commencer il faut reproduire l'arborescence demandée dans le document
+
+2)Installer un .venv avec les requirements dans requirements.txt
+
+3)Avoir les vidéos d'entrainement (me demander si nécessaire car trop lourde pour etre sur github)
+
+4)lancer extract_poses_sequences.py
+
+5)lancer train_model.py
+
+6)à partir de la avec prédict_from_video.py on peut predire un geste sur un vidéo avec une seule personne
+
+7)après avoir les frames annotées lancer train_ball_detector.py
+
+8) une fois les deux modèle entrainé on peut lancer predict_ball_on_video.py et analyze_5_players_final.py
