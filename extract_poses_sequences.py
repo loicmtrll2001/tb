@@ -5,7 +5,6 @@ import csv
 from tqdm import tqdm
 from feature_extraction import extract_features_from_keypoints
 
-# === CONFIGURATION ===
 DATA_DIR = "../assets/training_videos"
 OUTPUT_CSV = "../models/dataset_sequences.csv"
 FRAMES_PER_SEQUENCE = 30
@@ -13,7 +12,7 @@ FRAMES_PER_SEQUENCE = 30
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose()
 
-# === Initialiser l'en-tête du CSV dynamiquement ===
+
 sample_features = extract_features_from_keypoints([[0, 0, 0, 0]] * 33)
 header = [f"f{i}" for i in range(len(sample_features) * FRAMES_PER_SEQUENCE)]
 header.append("label")

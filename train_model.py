@@ -15,7 +15,7 @@ ENCODER_PATH = "../models/label_encoder.pkl"
 print("Chargement du dataset")
 df = pd.read_csv(DATASET_PATH)
 
-# Nettoyage : conversion en float et suppression des lignes corrompues
+#cinvertion en float et suppréssion des lignes corompues
 df = df.dropna()
 X = df.drop("label", axis=1).astype(np.float32).values
 y = df["label"].values

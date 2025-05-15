@@ -1,16 +1,16 @@
 import cv2
 import os
 
-# === CONFIGURATION ===
-VIDEOS_DIR = "assets/test_videos_5c5"  # Dossier avec tes vidéos
-OUTPUT_DIR = "dataset/frames"
-FRAMES_PER_VIDEO = 10  # Nombre de frames extraites par vidéo
-FRAME_START_OFFSET = 30  # Commencer à 30 frames pour éviter les débuts vides
 
-# Créer l'output dir
+VIDEOS_DIR = "assets/test_videos_5c5"
+OUTPUT_DIR = "dataset/frames"
+FRAMES_PER_VIDEO = 10
+FRAME_START_OFFSET = 30
+
+
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# Lister toutes les vidéos
+
 videos = [v for v in os.listdir(VIDEOS_DIR) if v.endswith((".mp4", ".MOV", ".avi"))]
 
 frame_count_total = 0
@@ -41,4 +41,4 @@ for video_name in videos:
 
     cap.release()
 
-print(f"✅ Extraction terminée : {frame_count_total} frames sauvegardées dans {OUTPUT_DIR}")
+print(f"Extraction terminée : {frame_count_total} frames sauvegardées dans {OUTPUT_DIR}")

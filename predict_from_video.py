@@ -6,7 +6,7 @@ import joblib
 from feature_extraction import extract_features_from_keypoints
 from collections import Counter, deque
 
-VIDEO_PATH = "../assets/test_videos/shoot_11.mp4"  # change ici pour ta vidéo de test
+VIDEO_PATH = "../assets/test_videos/shoot_11.mp4"
 MODEL_PATH = "../models/model_gestes.h5"
 ENCODER_PATH = "../models/label_encoder.pkl"
 FRAMES_PER_SEQUENCE = 30
